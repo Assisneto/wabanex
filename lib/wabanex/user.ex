@@ -16,7 +16,7 @@ defmodule Wabanex.User do
 
   def changeset(params) do
     %__MODULE__{}
-    |>cast(params, @fields)
+    |> cast(params, @fields)
     |> validate_required(@fields)
     |> validate_length(:password, min: 6)
     |> validate_length(:name, min: 2)

@@ -8,7 +8,6 @@ defmodule Wabanex.Users.Get do
     |> handle_response()
   end
 
-
   defp handle_response(:error), do: {:error, "Invalid UUID"}
 
   defp handle_response({:ok, uuid}) do
